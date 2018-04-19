@@ -1,0 +1,6 @@
+framework module XyiLotterySDK {
+  umbrella header "XyiLotterySDK.h"
+
+  export *
+  module * { export * }
+}
