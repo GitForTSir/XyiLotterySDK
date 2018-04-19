@@ -26,7 +26,7 @@ s.social_media_url   = "https://github.com/GitForTSir/XyiLotterySDK.git"
 
 # s.platform     = :ios
 s.platform     = :ios, "9.0"
-s.public_header_files = 'XyiLotterySDKDemo/XyiLotterySDK.framework/Headers/XyiLotterySDK.h'
+s.public_header_files = 'XyiLotterySDKDemo/XyiLotterySDK.framework/Headers/*.{h}'
 
 #  When using multiple platforms
 s.ios.deployment_target = "9.0"
@@ -35,7 +35,7 @@ s.ios.deployment_target = "9.0"
 # s.tvos.deployment_target = "9.0"
 
 s.source       = { :git => "https://github.com/GitForTSir/XyiLotterySDK.git", :tag => "#{s.version}" }
-#s.source_files    = 'XyiLotterySDKDemo/XyiLotterySDK.framework/Headers/*.{h}'
+s.source_files    = 'XyiLotterySDKDemo/XyiLotterySDK.framework/Headers/*.{h}'
 s.vendored_frameworks = 'XyiLotterySDKDemo/XyiLotterySDK.framework'
 
 
