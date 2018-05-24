@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "XyiLotterySDK"
-s.version      = "1.0.1"
+s.version      = "1.0.2"
 s.summary      = "XyiLotterySDK is Lottery SDK , you can buy lottery in the SDK"
 
 s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/CommonCrypto" }
