@@ -48,7 +48,7 @@
         
         NSString *sdkPartnerId=@"9801000";                    //向我司申请获得
         NSString *skey=@"0JBM3HYBNJJ4T5C6RSXZ1HVH9S8QCY4A";   //向我司申请获得
-        NSString *merUserId=@"yourMerUserID";                 //渠道商用户ID
+        NSString *merUserId=@"YourMerUserId";                 //渠道商用户ID
         NSString *amount=@"1000000";                          //用户余额
         
         NSString *signSrc = [NSString stringWithFormat:@"partnerId=%@#skey=%@#merUserId=%@#amount=%@",sdkPartnerId,skey,merUserId,amount];
