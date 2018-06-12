@@ -23,5 +23,9 @@
  String sign = MD5.encodeString(signSrc, "UTF-8");）
  */
 @property (nonatomic,strong) NSString *sign;
+/**
+ * 预支付订单（可选，默认为空）
+ */
+@property (nonatomic,strong) NSString *payId;
 
 @end
