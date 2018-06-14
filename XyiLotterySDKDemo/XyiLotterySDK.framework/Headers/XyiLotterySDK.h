@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "XyiPayInfo.h"
-
+@class XyiPayResp;
 
 typedef NS_ENUM(NSInteger,NetWorkEnvironment){
 
@@ -37,10 +37,9 @@ typedef NS_ENUM(NSInteger,NetWorkEnvironment){
 
  @param PayResp 支付结果
  */
--(void)xyiLotterySDKShowPayResp:(NSDictionary*)PayResp;
+-(void)xyiLotterySDKShowPayResp:(XyiPayResp*)PayResp;
 
 @end
-
 
 @interface RegisteResp :NSObject
 @property (nonatomic,assign,readonly) BOOL isRegisteSuccess;  //是否注册成功
@@ -49,6 +48,34 @@ typedef NS_ENUM(NSInteger,NetWorkEnvironment){
 @property (nonatomic,strong,readonly) NSString *sdkSrcUrl; //资源下载地址
 @property (nonatomic,assign,readonly) BOOL isForceUpdate; //是否更新
 @property (nonatomic,assign,readonly) BOOL isAuditState; //是否审核
+
+@end
+
+/**
+ 购买成功订单信息模型类
+ */
+@interface XyiPayResp :NSObject
+
+@property (nonatomic, copy  ) NSString   *gameType;      //玩法类型
+@property (nonatomic, copy  ) NSString   *issueName;     //奖期名称
+@property (nonatomic, copy  ) NSString   *anteCode;      //投注号码
+@property (nonatomic, copy  ) NSString   *betCardNo;     //投注卡号
+@property (nonatomic, assign) NSInteger  betMoney;       //方案总金额
+@property (nonatomic, assign) NSInteger  betNum;         //方案总注数
+@property (nonatomic, copy  ) NSString   *betTime;       //投注时间
+@property (nonatomic, copy  ) NSString   *bonusFollow;   //中奖后是否停止追号
+@property (nonatomic, assign) NSInteger  number;         //投注期数
+@property (nonatomic, copy  ) NSString   *planNo;        //方案编号
+@property (nonatomic, copy  ) NSString   *planState;     //方案状态
+@property (nonatomic, copy  ) NSString   *planType;      //购买类型 1 普通投注 2追号 3自动定投
+@property (nonatomic, assign) NSUInteger playTimes;      //投注倍数(默认为1倍)
+@property (nonatomic, copy  ) NSString   *playType;      //投注方式
+@property (nonatomic,copy)    NSString   *message;       //投注结果信息
+@property (nonatomic,assign)  NSInteger  code;           //投注结果code
+@property (nonatomic,copy)    NSString   *sdkPartnerId;  //渠道商id
+@property (nonatomic,copy)    NSString   *merUserId;     //渠道商用户id
+@property (nonatomic,copy)    NSString   *sdkUserId;     //渠道商id（SDK为渠道商分配的id）
+@property (nonatomic,assign)  NSInteger  amount;         //用户余额
 
 @end
 
