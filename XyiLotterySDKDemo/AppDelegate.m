@@ -21,8 +21,8 @@
     //此处模拟渠道商APP账户登录成功后注册XyiLotterySDK,在你的项目中,要把注册XyiLotterySDK放到渠道商用户登录成功后
     if (@available(iOS 9.0, *)){
         [XyiLotterySDK registeXYCPWithYourSdkPartnerId:@"9801000"
-                                             merUserId:@"wanggongf"
-                                    NetWorkEnvironment:NetWorkProduct
+                                             merUserId:@"youMerUserID"
+                                    NetWorkEnvironment:NetWorkDebug
                                            registeResp:^(RegisteResp *registeResp) {
             if (registeResp.isRegisteSuccess) {
                 NSLog(@"登录成功");
